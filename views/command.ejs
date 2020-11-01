@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./part/head.ejs') %>
+
+<body>
+    <%- include('./part/nav.ejs')  %>
+    <form action="/add_log" method="POST">
+        <h1>Enter Command</h1>
+        <label for="cmd">Command</label>
+        <input type="text" name="cmd" id="cmd" required>
+        <button type="submit">Run</button>
+    </form>
+</body>
+
+</html>
