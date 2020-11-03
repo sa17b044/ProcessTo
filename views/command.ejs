@@ -6,13 +6,13 @@
 <body>
     <%- include('./part/nav.ejs')  %>
     <div class="container">
-    <form action="/add_log" method="POST">
-        <h1>Enter Command</h1>
-        <label for="cmd">Command</label>
-        <input type="text" name="cmd"required>
-    </form>
-</div>
-<%- include('./part/footer.ejs')  %>
+        <form action="/add_log" method="POST">
+            <h1>Enter Command</h1>
+            <label for="cmd">Command</label>
+            <input type="text" name="cmd" required>
+        </form>
+    </div>
+    <%- include('./part/footer.ejs')  %>
 </body>
 
 </html>
