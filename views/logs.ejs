@@ -6,11 +6,16 @@
 
 <body>
     <%- include('./part/nav.ejs')  %>
-    <h1>Show Log</h1>
-    <ul>
-        <li><%= data.cmd %></li>
-        <li><%= data.log %></li>
-    </ul>
+    <div class="container">
+        <h1>Show Log</h1>
+        <div class="card light-blue darken-4">
+            <div class="card-content white-text">
+                <blockquote class="card-title"><%= data.cmd %></blockquote>
+                <p><%= data.log %></p>
+            </div>
+        </div>
+    </div>
+    <%- include('./part/footer.ejs')  %>
 </body>
 
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./part/head.ejs') %>
+
+<body>
+
+    <%- include('./part/nav.ejs')  %>
+
+    <div class="container">
+        <h1>File Upload</h1>
+        <%= typeof msg != 'undefined' ? msg : '' %> 
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="file-field input-field">
+                <div class="btn black">
+                    <span>File</span>
+                    <input type="file" name="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Choose a file">
+                </div>
+            </div>
+            <button type="submit" class="btn light-blue darken-4">Run</button>
+
+        </form>
+    </div>
+    <%- include('./part/footer.ejs')  %>
+</body>
+
+</html>
