@@ -48,6 +48,7 @@ app.post("/add_log", (req, res) => {
   cp.exec(cmd, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
+      res.render("command", { title: "Command" , error : error});
       return;
     }
     add_log_db(res, cmd, stdout);
