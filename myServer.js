@@ -26,6 +26,7 @@ mongoose
   .connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((data) => {
     app.listen(3000);
+    console.log("running ...");
   })
   .catch((err) => {
     console.log("Error" + err);
@@ -48,7 +49,7 @@ app.post("/add_log", (req, res) => {
   cp.exec(cmd, (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
-      res.render("command", { title: "Command" , error : error});
+      res.render("command", { title: "Command", error: error });
       return;
     }
     add_log_db(res, cmd, stdout);
@@ -56,6 +57,12 @@ app.post("/add_log", (req, res) => {
 });
 app.get("/upload", (req, res) => {
   res.render("upload", { title: "upload" });
+});
+app.get("/servers", (req, res) => {
+  res.render("servers", { title: "servers" });
+});
+app.get("/policies", (req, res) => {
+  res.render("policies", { title: "policies" });
 });
 app.post("/upload", (req, res) => {
   upload(req, res, (err) => {

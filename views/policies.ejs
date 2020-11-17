@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AddPolicy</title>
+</head>
+<%- include('./part/head.ejs') %>
+
+<body>
+  <%- include('./part/nav.ejs') %>
+  <div class="container">
+    <div class="card">
+      <form method="POST" action="/submit-form" enctype="multipart/form-data">
+        <h4>Policy</h4>
+        <div class="divider"></div>
+        <div class="col">
+          <div class="input-field row inputText">
+            <label>Policy Name: </label>
+            <input type="text" name="PolicyName" class="validate" />
+          </div>
+          <div class="row">
+            <label><input type="checkbox" name="inspection" />
+              <span>Inspection</span>
+            </label>
+          </div>
+          <div class="row">
+            <label><input type="checkbox" name="detection" />
+              <span>Detection</span>
+            </label>
+          </div>
+          <div class="row">
+            <label>
+              <input type="checkbox" name="individual_addressing" />
+              <span>Individual addressing</span>
+            </label>
+          </div>
+          <div class="row">
+            <h6>Services</h6>
+          </div>
+          <div class="row">
+            <label><input type="checkbox" name="SEARCH_REQUEST" />
+              <span>SEARCH_REQUEST</span>
+            </label>
+          </div>
+          <div class="row">
+            <label><input type="checkbox" name="DESCRIPTION_REQUEST" />
+              <span>DESCRIPTION_REQUEST</span>
+            </label>
+          </div>
+          <div class="row">
+            <h6>App services</h6>
+          </div>
+          <div class="row">
+            <label><input type="checkbox" name="A_IndividualAddress_Write" />
+              <span>A_IndividualAddress_Write</span>
+            </label>
+          </div>
+          <div class="row">
+            <label>
+              <input type="checkbox" name="A_IndividualAddress_Read" checked="checked" />
+              <span>A_IndividualAddress_Read</span>
+            </label>
+          </div>
+          <div class="input-field row inputNum">
+            <label for=" group_address_level">Group address level</label>
+            <input type="number" name="group_address_level" min="0" max="3" />
+          </div>
+          <div class="row">
+            <label for="group_address_file">Group address file</label>
+            <br />
+            <input type="file" name="group_address_file" class="blue lighten-4" />
+          </div>
+          <div class="row">
+            <label></label>
+            <input type="checkbox" name="header" />
+            <span>Header</span>
+          </div>
+          <div class="row">
+            <label><input type="checkbox" name="payload" />
+              <span>Payload</span>
+            </label>
+          </div>
+          <div class="row">
+            <input type="submit" value="Save" class="btn blue darken-4" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <%- include('./part/footer.ejs') %>
+</body>
+
+</html>

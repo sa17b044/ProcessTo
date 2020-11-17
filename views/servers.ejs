@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./part/head.ejs') %>
+
+<body>
+    <%- include('./part/nav.ejs') %>
+    <div class="container">
+        <div class="card">
+            <form method="POST" action="/submit-form" enctype="multipart/form-data">
+                <h4>Server</h4>
+                <div class="divider"></div>
+                <div class="col">
+                    <div class="input-field row inputText">
+                        <label>Source IP address</label>
+                        <input type="text" name="srcIP" class="validate" />
+                    </div>
+                    <div class="input-field row inputText">
+                        <label>Source Port</label>
+                        <input type="number" name="srcport" class="validate" />
+                    </div>
+                    <div class="input-field row inputText">
+                        <label>Destination IP address</label>
+                        <input type="text" name="dstIP" class="validate" />
+                    </div>
+                    <div class="input-field row inputText">
+                        <label>Destination Port</label>
+                        <input type="number" name="dstport" class="validate" />
+                    </div>
+                    <div class="input-field row inputNum">
+                        <label>Policy</label>
+                        <input type="number" name="policy" class="validate" />
+                    </div>
+                    <div class="row">
+                        <label><input type="checkbox" name="logKNXnetip" />
+                            <span>Log KNXnetip</span>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label><input type="checkbox" name="logToFile" />
+                            <span>Log to file</span>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Save" class="btn blue darken-4" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include('./part/footer.ejs') %>
+</body>
+
+</html>

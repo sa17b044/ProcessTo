@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./part/head.ejs') %>
+  <%- include('./part/head.ejs') %>
 
-<body>
-    <%- include('./part/nav.ejs')  %>
+  <body>
+    <%- include('./part/nav.ejs') %>
     <div class="container">
-        <h1>Home Page</h1>
-        <div class="card">
-            <h3>Login</h3>
-            <div class="card-content">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input type="text" class="validate">
-                            <label for="user_name">User Name</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input type="password" class="validate">
-                            <label for="password">Password</label>
-                        </div>
-                    </div>
-                </form>
+      <h1>Home Page</h1>
+      <div>
+        <h3>Login</h3>
+        <div>
+          <form>
+            <div>
+              <input type="text" />
+              <label for="userName">User Name</label>
             </div>
+            <div>
+              <input type="password" />
+              <label for="password">Password</label>
+            </div>
+          </form>
         </div>
-
+      </div>
     </div>
-    <%- include('./part/footer.ejs')  %>
-</body>
-
+    <%- include('./part/footer.ejs') %>
+  </body>
 </html>
