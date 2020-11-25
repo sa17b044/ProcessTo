@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./part/head.ejs') %>
+<%- include('./part/head.ejs') %>
 
-  <body>
-    <%- include('./part/nav.ejs') %>
-    <div class="container">
-      <h1>Home Page</h1>
-      <div>
-        <h3>Login</h3>
-        <div>
-          <form>
-            <div>
-              <input type="text" />
-              <label for="userName">User Name</label>
-            </div>
-            <div>
-              <input type="password" />
-              <label for="password">Password</label>
-            </div>
-          </form>
-        </div>
+<body>
+  <%- include('./part/nav.ejs') %>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form method="POST" action="#" enctype="multipart/form-data">
+      <div class="user-box">
+        <input type="text" name="user_name" required autocomplete="off"/>
+        <label>Username</label>
       </div>
-    </div>
-    <%- include('./part/footer.ejs') %>
-  </body>
+      <div class="user-box">
+        <input type="password" name="password" required autocomplete="off"/>
+        <label>Password</label>
+      </div>
+        <input type="submit" value="Login" class="btn"/>
+    </form>
+  </div>
+  <%- include('./part/footer.ejs') %>
+
+</body>
+
 </html>

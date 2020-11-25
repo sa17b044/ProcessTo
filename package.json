@@ -4,6 +4,7 @@
   "description": "",
   "main": "myServer.js",
   "dependencies": {
+    "assert": "^2.0.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "materialize-css": "^1.0.0-rc.2",
@@ -14,7 +15,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "node myserver.js",
-    "dev":"nodemon myServer.js"
+    "dev": "nodemon myServer.js"
   },
   "repository": {
     "type": "git",
