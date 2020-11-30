@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- <%- include('./part/head.ejs') %> -->
-  <body>
-    <%- include('./part/nav.ejs') %>
-    <div>
-      <form action="/pNewConf" method="post">
-        <label>Policy Name</label>
-        <input type="text" name="policy_name" />
-        <label>inspection</label>
-        <input type="checkbox" name="inspection"checked />
-        <label>detection</label>
-        <input type="checkbox" name="detection" checked/>
-        <label>Individual addressing</label>
-        <input type="checkbox" name="individual_addressing" checked/>
-        <label>Services</label>
-        <label>SEARCH_REQUEST</label>
-        <input type="checkbox" name="SEARCH_REQUEST" checked/>
-        <label>DESCRIPTION_REQUEST</label>
-        <input type="checkbox" name="DESCRIPTION_REQUEST" checked/>
-        <label>App services</label>
-        <label>A_IndividualAddress_Write</label>
-        <input type="checkbox" name="A_IndividualAddress_Write" checked/>
-        <label>A_IndividualAddress_Read</label>
-        <input type="checkbox" name="A_IndividualAddress_Read" checked/>
-        <label>Group address level</label>
-        <input type="number" name="group_address_level" />
-        <label>Group address file</label>
-        <input type="file" name="group_address_file" />
-        <label>Header</label>
-        <input type="checkbox" name="header" checked/>
-        <label>Payload</label>
-        <input type="checkbox" name="payload" checked/>
-        <input type="submit" value="Save" />
-      </form>
-      <%- include('./part/footer.ejs') %>
-    </div>
-  </body>
+  <%- include ('./partials/head.ejs') %> 
+<body>
+    <div class="container">
+        <div class="row red">
+          <div class="col black col-lg-2">
+            <%- include ('./partials/nav.ejs') %> 
+          </div>
+          <div class="col black">
+            <div class="container">
+              <form action="/pNewConf" method="post">
+                <div class="d-flex flex-column bd-highlight mb-3">
+                <label>Policy Name</label>
+                <input type="text" name="policy_name" />
+                <label>inspection</label>
+                <input type="checkbox" name="inspection"checked />
+                <label>detection</label>
+                <input type="checkbox" name="detection" checked/>
+                <label>Individual addressing</label>
+                <input type="checkbox" name="individual_addressing" checked/>
+                <label>Services</label>
+                <label>SEARCH_REQUEST</label>
+                <input type="checkbox" name="SEARCH_REQUEST" checked/>
+                <label>DESCRIPTION_REQUEST</label>
+                <input type="checkbox" name="DESCRIPTION_REQUEST" checked/>
+                <label>App services</label>
+                <label>A_IndividualAddress_Write</label>
+                <input type="checkbox" name="A_IndividualAddress_Write" checked/>
+                <label>A_IndividualAddress_Read</label>
+                <input type="checkbox" name="A_IndividualAddress_Read" checked/>
+                <label>Group address level</label>
+                <input type="number" name="group_address_level" />
+                <label>Group address file</label>
+                <input type="file" name="group_address_file" />
+                <label>Header</label>
+                <input type="checkbox" name="header" checked/>
+                <label>Payload</label>
+                <input type="checkbox" name="payload" checked/>
+                <input type="submit" value="Save" />
+              </div>
+              </form>
+          </div>
+        </div>
+      </div>
+      <%- include ('./partials/footer.ejs') %> 
+</body>
+
 </html>

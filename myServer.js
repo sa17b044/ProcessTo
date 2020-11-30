@@ -43,7 +43,9 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.render("index", { title: "Home" });
 });
-
+app.get("/dashboard", (req, res) => {
+  res.render("dashboard", { title: "dashboard" });
+});
 app.get("/command", (req, res) => {
   res.render("command", { title: "Command" });
 });
@@ -60,9 +62,15 @@ app.post("/add_log", (req, res) => {
     add_log_db(res, cmd, stdout);
   });
 });
+
 app.get("/upload", (req, res) => {
   res.render("upload", { title: "upload" });
 });
+
+app.get("/users", (req, res) => {
+  res.render("users", { title: "users" });
+});
+
 // Server section
 app.get("/servers", (req, res) => {
   res.render("servers", { title: "servers" });

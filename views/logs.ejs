@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./part/head.ejs') %>
 
 <body>
-  <%- include('./part/nav.ejs') %>
   <h4>Show Log</h4>
   <blockquote><%= data.cmd.replace('\n', '|PPP|') %></blockquote>
   <div class="divider"></div>
   <p><%= data.log %></p>
-  <%- include('./part/footer.ejs') %>
 </body>
 
 </html>

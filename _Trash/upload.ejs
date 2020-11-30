@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./part/head.ejs') %>
-
 <body>
-  <%- include('./part/nav.ejs') %>
-
   <div>
     <h1>File Upload</h1>
     <%= typeof msg != 'undefined' ? msg : '' %>
@@ -13,7 +9,5 @@
       <button type="submit" class="btn btn-primary">Run</button>
     </form>
   </div>
-  <%- include('./part/footer.ejs') %>
 </body>
-
 </html>

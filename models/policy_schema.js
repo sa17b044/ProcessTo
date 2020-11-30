@@ -54,9 +54,9 @@ const policy_schema = new mongoose.Schema({
     required: true,
   },
   group_address_file: {
-    type: String,
+    type: Buffer,
     required: true,
-  },
+  }, 
   header: {
     type: String,
     required: true,

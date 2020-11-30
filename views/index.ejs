@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./part/head.ejs') %>
-
+  <%- include ('./partials/head.ejs') %> 
 <body>
-  <%- include('./part/nav.ejs') %>
-  <div class="login-box">
+  <div class="container">
     <h2>Login</h2>
-    <form method="POST" action="#" enctype="multipart/form-data">
-      <div class="user-box">
-        <input type="text" name="user_name" required autocomplete="off"/>
+    <form method="POST" action="/user" enctype="multipart/form-data">
+      <div>
+        <input type="text" name="user_name" required autocomplete="off" />
         <label>Username</label>
       </div>
-      <div class="user-box">
-        <input type="password" name="password" required autocomplete="off"/>
+      <div>
+        <input type="password" name="password" required autocomplete="off" />
         <label>Password</label>
       </div>
-        <input type="submit" value="Login" class="btn"/>
+      <input type="submit" value="Login" />
     </form>
   </div>
-  <%- include('./part/footer.ejs') %>
 
 </body>
 

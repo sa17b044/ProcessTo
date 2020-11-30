@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./part/head.ejs') %>
-
   <body>
-    <%- include('./part/nav.ejs') %>
     <div class="container">
       <form action="/add_log" method="POST">
         <h1>Enter Command</h1>
@@ -11,6 +8,5 @@
         <input type="text" name="cmd" required />
       </form>
     </div>
-    <%- include('./part/footer.ejs') %>
   </body>
 </html>

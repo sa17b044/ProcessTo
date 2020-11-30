@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- <%- include('./part/head.ejs') %> -->
-
+    <%- include ('./partials/head.ejs') %> 
 <body>
-    <%- include('./part/nav.ejs') %>
-    <form action="sNewConf" method="post">
-        <label>Source IP address</label>
-        <input type="text" name="src_ip" placeholder="0.0.0.0/0" />
-        <label>Source Port</label>
-        <input type="number" name="src_port" />
-        <label>Destination IP address</label>
-        <input type="text" name="dst_ip" placeholder="0.0.0.0/0" />
-        <label>Destination Port</label>
-        <input type="number" name="dst_port" />
-        <label>Policy</label>
-        <input type="number" name="policy" />
-        <label>Log KNXnetip</label>
-        <input type="checkbox" name="logKNXnetip" value="logKNXnetip" />
-        <label>Log to file</label>
-        <input type="checkbox" name="logToFile" value="logToFile" />
-        <input type="submit" value="Save">
-    </form>
-    <%- include('./part/footer.ejs') %>
+    <div class="container">
+        <div class="row red">
+            <div class="col black col-lg-2">
+                <%- include ('./partials/nav.ejs') %> 
+            </div>
+            <div class="col black">
+                <div class="container">
+                    <form action="/pNewConf" method="post">
+                        <div class="d-flex flex-column bd-highlight mb-3">
+                            <label>Source IP address</label>
+                            <input type="text" name="src_ip" placeholder="0.0.0.0/0" />
+                            <label>Source Port</label>
+                            <input type="number" name="src_port" />
+                            <label>Destination IP address</label>
+                            <input type="text" name="dst_ip" placeholder="0.0.0.0/0" />
+                            <label>Destination Port</label>
+                            <input type="number" name="dst_port" />
+                            <label>Policy</label>
+                            <input type="number" name="policy" />
+                            <label>Log KNXnetip</label>
+                            <input type="checkbox" name="logKNXnetip" value="logKNXnetip" />
+                            <label>Log to file</label>
+                            <input type="checkbox" name="logToFile" value="logToFile" />
+                            <input type="submit" value="Save">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include ('./partials/footer.ejs') %> 
 </body>
 
 </html>
